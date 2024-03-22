@@ -9,7 +9,7 @@ display: flex;
 }
 .navbar .left h2{
     font-size: 30px;
-    color: #000000;
+    color: blue;
     margin-left: 65px;
 }
 .navbar .left{
