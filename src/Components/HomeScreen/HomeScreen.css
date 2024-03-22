@@ -1,0 +1,101 @@
+.home{
+    display: flex;
+}
+/*Nav Bar Box CSS*/
+
+.navbar{
+display: flex;
+
+}
+.navbar .left h2{
+    font-size: 30px;
+    color: #000000;
+    margin-left: 65px;
+}
+.navbar .left{
+    display: flex;
+}
+.navbar .left li{
+padding: 0px 20px;
+font-size: 22px;
+color: #000000;
+font-weight: 600;
+}
+.navbar .left ul{
+    list-style: none;
+    display: flex;
+    padding: 10px 103px;
+    cursor: pointer;
+}
+.navbar .right ul 
+{
+    display: flex;
+    list-style: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000000;
+    margin-left: 600px;
+    cursor: pointer;
+   
+}
+
+.navbar .left li:hover{
+    text-decoration: underline;
+    color: #5E5E5E;
+}
+.navbar .left li:hover:active{
+    text-decoration: underline;
+    color: gray;
+}
+
+
+
+/* End of Nav Bar Box CSS*/
+
+/*Search Bar Box CSS*/
+
+.searchbar{
+    box-sizing: border-box;
+    width: 311px;
+    height: 324px;
+    border: 2px solid #E8E8E8;
+    border-radius: 8px;
+    padding:  0px 10px 10px;
+    margin-left: 66px;
+    margin-right: 40px;
+}
+.searchbar h2{
+    padding-top: -5px
+}
+.searchbar input[type="text"]{
+    background-color: aqua;
+    width: 275px;
+    height: 48px;
+    background-color: #E8E8E8;
+    margin-bottom: 15px;
+    border: #E8E8E8 1px solid;
+    border-radius: 8px;
+}
+.searchbar input::placeholder{
+    color: #5E5E5E;
+    font-size: 18px;
+    font-weight: 400;
+    overflow: hidden;
+    padding: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+.searchbar button{
+    background-color: #f3f3f3;
+    color: #a6a6a6;
+    width: 275px;
+    height: 48px;
+    margin: 20px 0px 0px;
+    font-size: 18px;
+    padding: 14px 16px;
+    border: #f3f3f3;
+    border-radius: 8px;
+}
+
+/* End of Search Bar Box CSS*/
+
