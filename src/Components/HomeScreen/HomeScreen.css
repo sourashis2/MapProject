@@ -1,101 +1,112 @@
-.home{
+/* Common styles for both day and night mode */
+.home {
     display: flex;
-}
-/*Nav Bar Box CSS*/
-
-.navbar{
-display: flex;
-
-}
-.navbar .left h2{
-    font-size: 30px;
-    color: #000000;
-    margin-left: 65px;
-}
-.navbar .left{
-    display: flex;
-}
-.navbar .left li{
-padding: 0px 20px;
-font-size: 22px;
-color: #000000;
-font-weight: 600;
-}
-.navbar .left ul{
-    list-style: none;
-    display: flex;
-    padding: 10px 103px;
-    cursor: pointer;
-}
-.navbar .right ul 
-{
-    display: flex;
-    list-style: none;
-    font-size: 22px;
-    font-weight: 600;
-    color: #000000;
-    margin-left: 600px;
-    cursor: pointer;
-   
+    background: white;
 }
 
-.navbar .left li:hover{
-    text-decoration: underline;
-    color: #5E5E5E;
-}
-.navbar .left li:hover:active{
-    text-decoration: underline;
-    color: gray;
+/* Styles for day mode */
+.home.day {
+    --background-color: #FFFFFF;
+    --text-color: #000000;
 }
 
+/* Styles for night mode */
+.home.night {
+    --background-color: #000000;
+    --text-color: #FFFFFF;
+}
 
-
-/* End of Nav Bar Box CSS*/
-
-/*Search Bar Box CSS*/
-
-.searchbar{
+/* Search Bar Box CSS */
+.searchbar {
     box-sizing: border-box;
     width: 311px;
-    height: 324px;
-    border: 2px solid #E8E8E8;
+    border: 2px solid var(--background-color);
     border-radius: 8px;
-    padding:  0px 10px 10px;
+    padding: 10px;
     margin-left: 66px;
     margin-right: 40px;
+    background-color: var(--background-color);
+    position: relative; /* Make the search bar position relative */
 }
-.searchbar h2{
-    padding-top: -5px
+
+.searchbar h2 {
+    margin-top: 0; /* Reset margin */
+    color: var(--text-color);
 }
-.searchbar input[type="text"]{
-    background-color: aqua;
-    width: 275px;
+
+.searchbar input[type="text"] {
+    width: calc(100% - 25px);
     height: 48px;
-    background-color: #E8E8E8;
+    background-color: var(--background-color);
     margin-bottom: 15px;
-    border: #E8E8E8 1px solid;
+    border: 1px solid #E8E8E8; 
     border-radius: 8px;
+    padding-left: 10px; 
+    font-size: 18px;
+    color: var(--text-color);
 }
-.searchbar input::placeholder{
+
+.searchbar input::placeholder {
     color: #5E5E5E;
     font-size: 18px;
     font-weight: 400;
-    overflow: hidden;
-    padding: 25px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
+    padding-left: 40px;
 }
-.searchbar button{
-    background-color: #f3f3f3;
-    color: #a6a6a6;
-    width: 275px;
+
+.searchbar button {
+    background-color: #ec1313;
+    color: #FFFFFF;
+    width: 100%;
     height: 48px;
-    margin: 20px 0px 0px;
+    margin-top: 20px;
     font-size: 18px;
     padding: 14px 16px;
-    border: #f3f3f3;
+    border: none;
     border-radius: 8px;
+    cursor: pointer; /* Add cursor pointer */
 }
 
-/* End of Search Bar Box CSS*/
+/* Styles for up-down arrow image */
+.updown-img {
+    height: 30px;
+    width: 30px;
+    margin-left: 120px;
+}
 
+/* Styles for input container */
+.input-container {
+    position: relative;
+    width: 100%; /* Adjust width */
+}
+
+/* Styles for input fields */
+/* .input-container > input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} */
+
+.input-container1 {
+    background-image: url("../../Assets/Pickup.png");
+    background-size: 35px 35px; /* Adjust size of the background image */
+    background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+    background-position: 2px center; /* Adjust the position of the background image */
+    padding-left: 40px; /* Ensure enough padding for the text */
+    
+}
+
+.input-container2  {
+    background-image: url("../../Assets/dropoff.png");
+    background-size: 35px 35px; /* Adjust size of the background image */
+    background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+    background-position: 2px center; /* Adjust the position of the background image */
+    padding-left: 40px; /* Ensure enough padding for the text */
+    
+}

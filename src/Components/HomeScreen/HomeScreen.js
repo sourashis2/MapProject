@@ -1,6 +1,8 @@
-import React from 'react'
-import './HomeScreen.css';
+import React from 'react';
+import './homeScreen.css';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import pickUp from '../../Assets/Pickup.png';
+import upDown from '../../Assets/upDown.png';
 
 const libraries = ['places'];
 const mapContainerStyle = {
@@ -14,9 +16,14 @@ const center = {
 
 function HomeScreen() {
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyCgB1uIYwhZO_ewy8LmfNsNq44Yxo6U9y4',
+        googleMapsApiKey: 'YOUR_API_KEY',
         libraries,
     });
+
+    const handleSearch = () => {
+        // Logic for handling search
+        console.log('Search button clicked');
+    };
 
     if (loadError) {
         return <div>Error loading maps</div>;
@@ -31,23 +38,27 @@ function HomeScreen() {
             <div className="searchbar">
                 <h2>Get a ride</h2>
                 <form>
-                    <input type="text" placeholder="Pickup location"></input><br></br>
-                    <input type="text" placeholder="Dropoff location"></input><br></br>
-                    <button type="button">Search</button>
+                    <div>
+                        <input type="text" placeholder="Pickup location" className="input-container1"/>
+                    </div>
+
+                    <img src={upDown} alt='UpDown' className='updown-img'/>
+                    
+                    <div >
+                        <input type="text" placeholder="Dropoff location" className="input-container2"/>   
+                    </div>
+
+                    <button type="button" onClick={handleSearch}>Search</button>
                 </form>
             </div>
             <div className="map">
-            <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                zoom={10}
-                center={center}
-            >
-                <Marker position={center} />
-            </GoogleMap>
+                <GoogleMap mapContainerStyle={mapContainerStyle} zoom={10} center={center}>
+                    <Marker position={center} icon={pickUp} />
+                    {/* Add more markers for dropoff locations */}
+                </GoogleMap>
             </div>
-           
         </div>
-    )
+    );
 }
 
-export default HomeScreen
+export default HomeScreen;
