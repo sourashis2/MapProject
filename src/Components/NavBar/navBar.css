@@ -1,0 +1,84 @@
+/* Default day mode */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  /* Night mode */
+  .navbar.night-mode {
+    --background-color: #1f1f1f;
+    --text-color: #ffffff;
+  }
+  
+  .navbar {
+    display: flex;
+    background: var(--background-color); /* Use CSS variable */
+  }
+  
+  .navbar .left h2 {
+    font-size: 40px;
+    color: var(--text-color); /* Use CSS variable */
+    margin-left: 65px;
+  }
+  
+  .navbar .left {
+    display: flex;
+  }
+  
+  .navbar .left li {
+    padding: 0px 20px;
+    font-size: 22px;
+    color: var(--text-color); /* Use CSS variable */
+    font-weight: 600;
+  }
+  
+  .navbar .left ul {
+    list-style: none;
+    display: flex;
+    padding: 10px 103px;
+    cursor: pointer;
+  }
+  
+  .navbar .right ul {
+    display: flex;
+    list-style: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-color); /* Use CSS variable */
+    margin-left: 450px;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+  
+  .navbar .left li:hover {
+    text-decoration: underline;
+    color: rgb(13, 13, 13);
+  }
+  
+  .navbar .left li:hover:active {
+    text-decoration: underline;
+    color: rgb(10, 10, 10);
+  }
+  
+  .navOptions {
+    margin-top: 32px;
+    max-width: fit-content;
+  }
+  
+  .mytrips {
+    display: flex;
+    margin-right: 25px;
+    background-image: url('../../Assets/myprofile.png');
+    background-position: left;
+    background-size: 25px 25px;
+    background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+    background-position: 2px center; /* Adjust the position of the background image */
+    padding-left: 35px;
+  }
+  .dayNight {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 45px;
+  }
+  

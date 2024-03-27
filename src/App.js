@@ -1,6 +1,5 @@
-import './App.css';
-import HomeScreen from './Components/HomeScreen/HomeScreen';
-import NavBar from './Components/HomeScreen/NavBar';
+import HomeScreen from '../src/Components/HomeScreen/homeScreen';
+import NavBar from '../src/Components/NavBar/navBar';
 function App() {
   return (
     <div>
